@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{% static 'todo/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'todo/css/fontawesome/css/all.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header-text name">Xin chào!</h1>
+            <h3 class=" header-text count__tasks">Bạn có 3 task </h3>
+        </div>
+        <div class="add__task">
+            <form action="" method="post" class="form__addTask">
+                {% csrf_token %}
+                <input type="text" class="input__task name__task" placeholder="Nhập tên task...">
+                <input type="text" class="input__task content__task" placeholder="Nhập nội dung task...">
+                <!-- <div class="cb_completed">
+                    <input type="checkbox" name="checkbox_completed" id="checkbox_completed"
+                    value="completed">
+                <label for="checkbox_completed"> Hoàn thành</label>
+                </div> -->
+                <div class="btn-Add">
+                    <button type="submit" class="btn" >Nộp</button>
+                </div>
+            </form>
+        </div>
+        <div class="content">
+            
+            
+        </div>
+    </div>
+    <script src="{% static 'todo/js/main.js'%}"></script>
+</body>
+</html>
